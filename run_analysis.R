@@ -48,11 +48,11 @@ names_to_keep <- names_to_keep[c(1:3, grep("mean", names_to_keep), grep("std", n
 # remove meanFreq becasue there is no std associated with it, so it is not true "mean" of measurement
 names_to_keep <- names_to_keep[-(grep("meanFreq", names_to_keep))]
 names_to_keep <- sort(names_to_keep)
+#move subject to front
+names_to_keep <- c(names_to_keep[names_to_keep == "subject"], names_to_keep[names_to_keep != "subject"])
 
 # keep only the columns to keep
 data_tidy <- data[,names_to_keep]
-#move subject to front
-data_tidy <- subset(data_tidy, select = c("subject", names_to_keep[names_to_keep != "subject"]))
 # order by subject number
 data_tidy <- data_tidy[order(data$subject),]
 
