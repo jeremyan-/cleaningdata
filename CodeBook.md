@@ -6,8 +6,9 @@ The following actions were done to create the “data_final.txt” tidy data set
 2. Inertial signals were not included.
 3. Training labels (activity labels) (1-6) were converted to text, descriptive of the kind of activities.
 4. Subject were sorted from 1-30.
-5. Only measurements with both "mean" and "std" were chosen to be kept. "meanFreq" was removed, as it is "weighted average".
+5. Only measurements with both "mean" and "std" were chosen to be kept. Other data with "mean" such as "meanFreq" were removed, as they are not true means and there is no standard deviations associated with them.
 6. Variable names were taken from "features.txt"
+7. For tidy data set, as requested by step 5, average value was calculated from raw data for each subject and each activity.
 
 ## Descriptions of the variables
 
