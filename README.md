@@ -9,3 +9,5 @@ Train and test datasets were process separately, then merged by `rbind`.
 The order of the columns were sorted alphabetically, except that "subject" is rearranged to be the first column. 
 
 To create a tidy dataset for step five, the script loop through the table by subject, then by activity. The average of the numbers per subject and activity, is calculated with `colMeans`, which generate a list of numbers. This list of numbers is converted to a data.frame. This data.frame has only one column, so it is transposed to match existing data structure. 
+
+__Note__: I did not use `plyr` or `dplyr` package because I finished the course project before I was able to learn `plyr` or `dplyr` packages. These packages are great, but they just do things in a simpler way, but completely relying on built-in R functions, like what I did, should also be okay.
